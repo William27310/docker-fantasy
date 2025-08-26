@@ -1,0 +1,16 @@
+services:
+  web:
+    image: php:8.2-apache
+    container_name: php-apache-fantasy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8000:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
