@@ -55,6 +55,15 @@ class Guerrier extends Character
         $this->setWeaponDamage($weaponDamage);
         $this->setShield($shield);
         $this->setShieldValue($shieldValue);
+        // echo '<div class="card" style="width: 18rem;">';
+        // echo '<img src="assets/img/bryan.jpg" class="card-img-top" alt="..."> ';
+        // echo '<div class="card-body">';
+        // echo '<h5> Guerrier </h5>';
+        // echo '<p class="card-text">' . "Health : " . $this->getHealth() . '<br>' . "Mana : " . $this->getMana() . '<br>' . '</p>';
+        // echo '<p>' . "Weapon : " . $this->getWeapon() . '<br>' . "Weapon Damage : " . $this->getWeaponDamage() . '<br>' . '</p>';
+        // echo '<p class="card-text">' . "Shield : " . $this->getShield() . '<br>' . "Shield Absorption : " . $this->getShieldValue() . '<br>' . '</p>';
+        // echo '</div>';
+        // echo '</div>';
     }
 
     public function attack()
@@ -66,7 +75,7 @@ class Guerrier extends Character
     {
         $counterdamage = $damage - $this->getShieldValue();
         if ($counterdamage > 0) {
-        $this->setHealth($this->getHealth() - $counterdamage);
+            $this->setHealth($this->getHealth() - $counterdamage);
         }
     }
 }

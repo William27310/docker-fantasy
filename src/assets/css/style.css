@@ -1,0 +1,28 @@
+body {
+    font-family: "Asimovian", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background: #5c5353;
+    background: linear-gradient(90deg, rgba(92, 83, 83, 1) 0%, rgba(99, 88, 88, 1) 50%, rgba(105, 95, 95, 1) 100%);
+}
+
+h1 {
+    margin-top: 12rem;
+}
+
+.formulaire {
+    margin-top: 10rem;
+}
+
+span {
+    font-weight: bolder;
+}
+
+.card {
+    background-image: url('../img/bois.jpg');
+}
+
+h4, p {
+    color: white;
+}
