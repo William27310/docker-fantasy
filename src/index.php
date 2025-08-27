@@ -2,6 +2,7 @@
 
 require "Character.php";
 require "Guerrier.php";
+require "Orc.php";
 
  ?>
 
@@ -14,11 +15,11 @@ require "Guerrier.php";
  </head>
  <body>
     
-    <?php $cookie = new Character(10,10); 
-    var_dump($cookie); ?>
-
     <?php $barbare = new Guerrier(100,100,"Masse",2,"Bouclier du soleil",100);
-    var_dump($barbare); ?>
+    var_dump($barbare);
+    $barbare->getDamage(150);
+    var_dump($barbare);
+    ?>
 
  </body>
  </html>
