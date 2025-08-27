@@ -3,8 +3,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: white;
-    background: #5c5353;
-    background: linear-gradient(90deg, rgba(92, 83, 83, 1) 0%, rgba(99, 88, 88, 1) 50%, rgba(105, 95, 95, 1) 100%);
+    background-color: black;
 }
 
 h1 {
