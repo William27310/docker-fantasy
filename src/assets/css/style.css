@@ -25,3 +25,8 @@ span {
 h4, p {
     color: white;
 }
+
+.card-orc {
+    display: flex;
+    justify-content: center;
+}

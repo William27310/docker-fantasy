@@ -50,43 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 
-   <div>
-      <div class="d-flex justify-content-around mt-5 mb-5">
-
-         <?php if (isset($_SESSION['barbare'])) { ?>
-
-            <div class="card" style="width: 18rem;">
-               <img src="assets/img/bryan.jpg" class="card-img-top" alt="...">
-               <div class="card-body">
-                  <h4 class="mt-4"> Guerrier </h4>
-                  <hr>
-                  <p class="card-text"><span> Health : </span> <?= $_SESSION['barbare']->getHealth() ?> <br><span> Mana : </span> <?= $_SESSION['barbare']->getMana() ?> <br></p>
-                  <p><span> Weapon : </span> <?= $_SESSION['barbare']->getWeapon() ?> <br><span> Weapon Damage : </span><?= $_SESSION['barbare']->getWeaponDamage() ?> <br></p>
-                  <p class="card-text"><span> Shield : </span><?= $_SESSION['barbare']->getShield() ?> <br><span> Shield Absorption : </span><?= $_SESSION['barbare']->getShieldValue() ?> <br></p>
-               </div>
-            </div>
-
-         <?php } ?>
-
-         <h1>VS</h1>
-
-         <?php if (isset($_SESSION['orque'])) { ?>
-
-            <div class="card-test">
-               <div class="card" style="width: 18rem;">
-                  <img src="assets/img/Orc.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                     <h4 class="mt-4"> Orc </h4>
-                     <hr>
-                     <p class="card-text"><span>Health : </span> <?= $_SESSION['orque']->gethealth() ?> <br><span> Mana : </span> <?= $_SESSION['orque']->getMana() ?> <br></p>
-                     <p><span> Damage Min : </span> <?= $_SESSION['orque']->getDamageMin() ?> <br><span> Damage Max : </span> <?= $_SESSION['orque']->getDamageMax() ?> <br></p>
-                  </div>
-               </div>
-            </div>
-      </div>
-
-   <?php } ?>
-
    <div class="formulaire d-flex justify-content-around">
       <form action="" method="POST">
          <input type="hidden" name="action" value="create-warrior">
@@ -113,6 +76,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <a class="btn btn-dark" href="reset.php">Effacer les données</a>
    </div>
 
+   <?php if (isset($_SESSION['barbare'])) { ?>
+
+      <div class="d-flex justify-content-around mt-5 mb-5">
+         <div class="card" style="width: 18rem;">
+            <img src="assets/img/bryan.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h4 class="mt-4"> Guerrier </h4>
+               <hr>
+               <p class="card-text"><span> Health : </span> <?= $_SESSION['barbare']->getHealth() ?> <br><span> Mana : </span> <?= $_SESSION['barbare']->getMana() ?> <br></p>
+               <p><span> Weapon : </span> <?= $_SESSION['barbare']->getWeapon() ?> <br><span> Weapon Damage : </span><?= $_SESSION['barbare']->getWeaponDamage() ?> <br></p>
+               <p class="card-text"><span> Shield : </span><?= $_SESSION['barbare']->getShield() ?> <br><span> Shield Absorption : </span><?= $_SESSION['barbare']->getShieldValue() ?> <br></p>
+            </div>
+         </div>
+
+      <?php } ?>
+
+      <?php if (isset($_SESSION['barbare']) && isset($_SESSION['orque'])) { ?>
+
+         <h1>VS</h1>
+
+      <?php } ?>
+
+
+      <?php if (isset($_SESSION['orque'])) { echo '<div class="d-flex justify-content-around mt-5 mb-5">' ?>
+
+         <div class="card" style="width: 18rem;">
+            <img src="assets/img/Orc.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h4 class="mt-4"> Orc </h4>
+               <hr>
+               <p class="card-text"><span>Health : </span> <?= $_SESSION['orque']->gethealth() ?> <br><span> Mana : </span> <?= $_SESSION['orque']->getMana() ?> <br></p>
+               <p><span> Damage Min : </span> <?= $_SESSION['orque']->getDamageMin() ?> <br><span> Damage Max : </span> <?= $_SESSION['orque']->getDamageMax() ?> <br></p>
+            </div>
+         </div>
+      </div>
+
+   <?php } ?>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
